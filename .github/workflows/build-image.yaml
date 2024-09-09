@@ -1,19 +1,5 @@
 name: Build and Push Image
 
-# Run on push event
-# on:
-#     push:
-#         branches:
-#             - main
-
-# Run after tagged
-# on:
-#   workflow_run:
-#     workflows: ["Auto Tag"]
-#     types:
-#       - completed
-
-# Run on tag pushed
 on:
   push:
     tags:
@@ -42,6 +28,7 @@ jobs:
             - name: Build and push image
               uses: docker/build-push-action@v6
               with:
+                platforms: linux/amd64,linux/arm64
                 context: .
                 file: ./Dockerfile
                 push: true
