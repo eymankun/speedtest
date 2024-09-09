@@ -1,5 +1,6 @@
 name: Build and Push Image
 
+# Run on tag pushed
 on:
   push:
     tags:
