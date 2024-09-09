@@ -1,0 +1,25 @@
+name: Auto Tag
+on:
+    pull_request:
+        types:
+            - closed
+        branches:
+            - main
+
+jobs:
+    tag:
+        if: github.event.pull_request.merged == true
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v3
+              name: Checkout git
+              with:
+                ref: ${{ github.event.pull_request.merge_commit_sha }}
+                fetch-depth: '0'
+            - uses: anothrNick/github-tag-action@v1
+              name: Bump version and push tag
+              env:
+                WITH_V: true
+                permissions: write
