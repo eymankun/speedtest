@@ -3,6 +3,10 @@
 A simple, easy-to-use network speed test tool that runs in a Docker container.
 This image allows you to quickly measure your internet speed using speedtest-cli without needing to install it on your host system.
 
+[![Build and Push Image](https://github.com/eymankun/speedtest/actions/workflows/build-image.yaml/badge.svg)](https://github.com/eymankun/speedtest/actions/workflows/build-image.yaml)
+[![GitHub tag](https://img.shields.io/github/tag/eymankun/speedtest.svg)](https://GitHub.com/eymankun/speedtest/tags/)
+<!-- [![GitHub contributors](https://img.shields.io/github/contributors/eymankun/speedtest.svg)](https://GitHub.com/eymankun/speedtest/graphs/contributors/) -->
+
 ## Usage
 
 ### Pulling image
