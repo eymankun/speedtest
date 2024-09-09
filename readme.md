@@ -27,7 +27,7 @@ docker run eymankun/speedtest
 
 This will run a one-time speed test and display the results (download/upload speed, latency, etc.) directly in your terminal.
 
-### Customizing the command
+<!-- ### Customizing the command
 
 You can also pass any speedtest-cli options as arguments to the container. For example, to run the speed test in JSON format:
 
@@ -35,7 +35,7 @@ You can also pass any speedtest-cli options as arguments to the container. For e
 docker run --rm eymankun/speedtest --json
 ```
 
-For a complete list of options, refer to the [speedtest-cli documentation](https://github.com/sivel/speedtest-cli#usage).
+For a complete list of options, refer to the [speedtest-cli documentation](https://github.com/sivel/speedtest-cli#usage). -->
 
 ### Example Output
 
@@ -48,7 +48,7 @@ Download: 597.78 Mbit/s
 Upload: 453.81 Mbit/s
 ```
 
-## Contribting
+## Contributing
 
 Feel free to submit issues or pull requests if you have any ideas for improvements or if you encounter any bugs.
 
