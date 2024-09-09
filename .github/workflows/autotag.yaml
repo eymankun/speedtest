@@ -22,4 +22,4 @@ jobs:
               name: Bump version and push tag
               env:
                 WITH_V: true
-                permissions: write
+                GITHUB_TOKEN: ${{ secrets.PAT }}
