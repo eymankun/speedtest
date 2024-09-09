@@ -1,9 +1,17 @@
 name: Build and Push Image
 
+# Run on push event
+# on:
+#     push:
+#         branches:
+#             - main
+
+# Run after tagged
 on:
-    push:
-        branches:
-            - main
+  workflow_run:
+    workflows: ["Auto Tag"]
+    types:
+      - completed
 
 jobs:
     builds:
