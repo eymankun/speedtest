@@ -35,4 +35,6 @@ jobs:
                 context: .
                 file: ./Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_USERNAME }}/speedtest:latest
+                tags: |
+                    ${{ secrets.DOCKER_USERNAME }}/speedtest:latest
+                    ${{ secrets.DOCKER_USERNAME }}/speedtest:${{ github.ref }}
