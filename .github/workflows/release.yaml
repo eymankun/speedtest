@@ -1,0 +1,24 @@
+on:
+    push:
+        tags:
+            - v*
+
+name: Create Release Draft
+
+jobs:
+    build:
+        name: Create Draft
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Create Release Draft
+              uses: actions/create-release@v1
+              id: create_release
+              env:
+                GITHUB_TOKEN: ${{ secrets.PAT }}
+              with:
+                tag_name: ${{ github.ref }}
+                release_name: Release ${{ github.ref }}
+                draft: true
+                prerelease: false
