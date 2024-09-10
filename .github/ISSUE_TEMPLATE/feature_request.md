@@ -1,9 +1,9 @@
-<!--markdownlint-disable MD041 MD022 MD032 MD007 -->
 ---
 name: "Feature request :bulb:"
-title: ":bulb: Feature request: "
 about: Suggest an idea
+title: "[FEATURE :bulb:] Your feature request title"
 labels: enhancement
+assignees: 'eymankun'
 
 ---
 
